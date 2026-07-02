@@ -4,3 +4,51 @@ body {
     background-attachment: fixed;
     color: white;
 }
+
+.Intro{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 60px;
+    padding-right: 200px;
+    gap: 200px;
+}
+
+.Intro .Profile {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    
+    box-shadow: 0 0 20px 10px rgba(248, 17, 17, 0.8);
+    
+    background-image: url('Profile.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 20%; 
+}
+
+.Intro .Introtext {
+    margin-right: 20px;
+    text-align: right;
+    color: #cc2d2d;
+    text-shadow: rgba(248,17,17,0.75) 0px 0px 7px;
+    font-family: 'Century Gothic', sans-serif;
+}
+
+.Intro .Introtext h1 {
+    font-size: 75px;
+    margin-bottom: 10px;
+}
+
+.Intro .Introtext p {
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.Intro .Profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0% 0%; 
+}
