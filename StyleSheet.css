@@ -38,18 +38,23 @@ body {
   background-color: #111111;
 }
 
-.Intro{
+.IntroAbout {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-top: 60px;
-    padding-right: 200px;
-    gap: 200px;
+    align-items: flex-start;
+    gap: 100px; 
+    padding: 90px 40px 0 40px; 
+    justify-content: center;
 }
 
+.Intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
 .Intro .Profile {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     overflow: hidden;
     
@@ -86,7 +91,11 @@ body {
 }
 
 .About {
-    padding-left: 100px;
-    padding-top: 100px;
-    gap: 100px;
+    background-color: rgba(255, 29, 29, 0.6); 
+    border: 2px solid rgba(223, 74, 74, 0.2); 
+    border-radius: 15px; 
+    padding: 50px; 
+    box-shadow: 0 4px 15px rgba(94, 0, 0, 0.5); 
+    max-width: 600px;
+    margin-top: 200px; 
 }
