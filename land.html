@@ -29,5 +29,64 @@
     </div>
 </div>
 
+<button id="prevBtn">&#10094; (Left Arrow)</button>
+<button id="nextBtn">&#10095; (Right Arrow)</button>
+
+<div class="carousel-window">  
+    <div class="carousel-track">
+        <div class="project-slide">
+            <a href="project1.html" style="text-decoration: none; color: inherit;">
+                <h2>Project 1</h2>
+                <p>Details about project 1...</p>
+            </a>
+        </div>
+        <div class="project-slide">
+            <a href="project2.html" style="text-decoration: none; color: inherit;">
+                <h2>Project 2</h2>
+                <p>Details about project 2...</p>
+            </a>
+        </div>
+        <div class="project-slide">
+            <a href="project3.html" style="text-decoration: none; color: inherit;">
+                <h2>Project 3</h2>
+                <p>Details about project 3...</p>
+            </a>
+        </div>
+        <div class="project-slide">
+            <a href="project4.html" style="text-decoration: none; color: inherit;">
+                <h2>Project 4</h2>
+                <p>Details about project 4...</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    const track = document.querySelector('.carousel-track');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    let currentIndex = 0;
+    const totalSlides = document.querySelectorAll('.project-slide').length;
+
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < totalSlides - 1) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+</script>
+
 </body>
 </html>
